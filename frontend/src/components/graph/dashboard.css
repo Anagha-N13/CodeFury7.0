@@ -1,0 +1,35 @@
+.dashboard-container {
+    display: flex;
+}
+
+.state-list {
+    width: 25%;
+    padding: 10px;
+}
+
+.state-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.state-list li {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.state-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.bar-graph {
+    width: 75%;
+    padding: 10px;
+}
+
+/* src/CSS/dashboard.css */
+
+.bar-graph {
+    width: 60%; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    margin: auto; /* Center the graph */
+}
