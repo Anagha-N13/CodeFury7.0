@@ -11,6 +11,9 @@ import DisasterInfo from '../components/info/info';
 import EducationalResources from '../pages/EducationalResources';
 import Register from '../pages/Register';
 import Login from '../pages/Login';
+//import PostList from '../components/post/postList';
+import PostForm from '../components/post/postForm';
+import Post from '../components/post/post';
 
 const AppRoutes = () => {
     return (
@@ -25,6 +28,8 @@ const AppRoutes = () => {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/info" element={<DisasterInfo />} />
                 <Route path="/educationalResources" element={<EducationalResources />} />
+                <Route path="/posts" element={<Post />} />
+                <Route path="/post" element={<PostForm />} />
                 {/* <Route path="/resource/:id" element={<ResourceDetailsPage />} /> */}
             </Routes>
         </Router>
