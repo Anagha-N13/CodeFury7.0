@@ -22,10 +22,12 @@ app.use(cors({
     }
 }));
 
-
+// Import and use resource routes
+const resourceRoutes = require('./src/routes/resourceAllocatorRoutes');
+app.use('/api/', resourceRoutes);
 
 app.all("/*",(req,res)=>{
-    res.send("page not found");
+    res.status(404).send("page not found");
 });
 
 const port = process.env.PORT
