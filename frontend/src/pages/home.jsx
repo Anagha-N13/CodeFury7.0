@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
  //import WeatherComponent from '../components/weather'
 // import ResourceLocatorPage from './ResourceLocatorPage'
 // import WeatherComponent from '../components/weather/weather'

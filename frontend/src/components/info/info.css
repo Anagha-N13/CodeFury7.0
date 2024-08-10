@@ -1,33 +1,108 @@
+.info-main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(90,228,168);
+background: -moz-linear-gradient(23deg, rgba(90,228,168,0.560749299719888) 67%, rgba(61,65,71,1) 100%);
+background: -webkit-linear-gradient(23deg, rgba(90,228,168,0.560749299719888) 67%, rgba(61,65,71,1) 100%);
+background: linear-gradient(23deg, rgba(90,228,168,0.560749299719888) 67%, rgba(61,65,71,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5ae4a8",endColorstr="#3d4147",GradientType=1);
+}
+
 .disaster-container {
-    display: flex;
-    padding: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 60px 200px;
+  height: calc(100vh - 120px); /* Adjust based on the height of the menu and other elements */
+  max-height: 100vh;
+  overflow: hidden; /* Prevent overflow on the container */
   
-  .disaster-menu {
-    width: 20%;
-    padding-right: 20px;
-  }
+}
+
+.disaster-menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  position: fixed; /* Fixed positioning to keep the menu in place */
+  top: 20px; /* Adjust as needed */
+  width: calc(100% - 400px); /* Adjust based on your margins */
   
-  .disaster-menu ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .disaster-menu li {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #f0f0f0;
-    margin-bottom: 5px;
-    text-align: center;
-  }
-  
-  .disaster-menu li:hover {
-    background-color: #ccc;
-  }
-  
-  .disaster-info {
-    width: 40%;
-    padding-right: 20px;
-  }
-  
-  
+  z-index: 10; /* Ensure menu stays on top */
+}
+
+.disaster-menu ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.disaster-menu li {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.disaster-menu li:hover,
+.disaster-menu li.active {
+  background-color: #3D4147;
+  color: #5AE4A8;
+}
+
+.disaster-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px; /* Adjust margin-top based on the height of the fixed menu */
+  height: calc(100% - 60px); /* Ensure it fits the remaining height */
+  overflow: hidden; /* Prevent overflow on the content container */
+}
+
+.disaster-info {
+  width: 60%;
+  max-height: 100%; /* Ensure it fits within the available height */
+  overflow-y: scroll; /* Make only the content area scrollable */
+  padding-right: 20px;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.disaster-info::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.titlee {
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.disaster-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.disaster-images {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  top: 60px; /* Match the height of the fixed menu */
+  overflow-y: scroll; /* Make only the content area scrollable */
+  padding-right: 20px;
+  scrollbar-width: none;
+}
+.disaster-images::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+.disaster-images img {
+  width: 300px;
+  height: 150px; /* Increased image height */
+  object-fit: cover;
+  border-radius: 5px;
+}
