@@ -1,46 +1,56 @@
+/* Ensure the chatbot is positioned at the bottom-right corner with 50% height */
 .chatbot-container {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 350px;
-    height: 500px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 350px; /* Adjust width as needed */
+    height: 50vh; /* 50% of the viewport height */
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    z-index: 100;
+    z-index: 100; /* Ensure it appears above other content */
+    display: flex;
+    flex-direction: column;
 }
 
+/* Style for chat history to handle overflow */
 .chat-history {
-    height: 80%;
+    flex: 1; /* Fill the remaining space */
     overflow-y: auto;
     padding: 10px;
 }
 
+/* Style for individual chat messages */
 .chat-message {
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 5px;
     max-width: 80%;
+    word-wrap: break-word;
 }
 
+/* User message styling */
 .chat-message.user {
     align-self: flex-end;
-    background-color: #007bff;
+    background-color: rgb(90, 228, 168);
     color: white;
 }
 
+/* Bot message styling */
 .chat-message.bot {
     align-self: flex-start;
     background-color: #e9ecef;
 }
 
+/* Style for the chat input area */
 .chat-input {
     display: flex;
     padding: 10px;
     border-top: 1px solid #ccc;
 }
 
+/* Style for the chat input field */
 .chat-input input {
     flex: 1;
     padding: 10px;
@@ -48,16 +58,18 @@
     border-radius: 5px;
 }
 
+/* Style for the send button */
 .chat-input button {
     margin-left: 10px;
     padding: 10px;
     border: none;
-    background-color: #007bff;
+    background-color: #3D4147;
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
+/* Hover effect for the send button */
 .chat-input button:hover {
-    background-color: #0056b3;
+    background-color: rgb(90, 228, 168);
 }

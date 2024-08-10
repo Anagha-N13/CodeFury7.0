@@ -29,7 +29,7 @@
 h2 {
     margin-bottom: 30px; /* Add margin to the bottom of the heading */
     font-weight: bold;
-    color: #333;
+    /* color: #333; */
 }
 
 button {
