@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './weather.css';
+const location = require('../../Assets/Ananya/icon/location.png')
+
 
 const WeatherComponent = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -63,13 +65,13 @@ const WeatherComponent = () => {
       <h1 className="weather-title">Weather Forecast</h1>
       {weatherData && (
         <div className="weather-info">
-          <p className="weather-location">{cityName}</p>
+          <p className="weather-location"><img src={location}/>{cityName}</p>
           <p className="weather-temp">{Math.round(weatherData.list[0].main.temp)}°C</p>
           <p className="weather-description">{weatherData.list[0].weather[0].description}</p>
           <p className="weather-humidity">Humidity: {weatherData.list[0].main.humidity}%</p>
-          {weatherData.list[0].rain && (
+          {/* {weatherData.list[0].rain && (
             <p className="weather-rain">Rain (next 3 hours): {weatherData.list[0].rain['3h']} mm</p>
-          )}
+          )} */}
           <p className="weather-air-quality">Air Quality: Good</p>
 
           <div className="last-updated">Last Updated: {lastUpdated}</div>
