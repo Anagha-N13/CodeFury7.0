@@ -1,6 +1,10 @@
 require('./src/db/mongoose');
 const path = require('path'); // Add this line at the top of your file
 
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
+
 const cors = require('cors');
 const express = require('express');
 const app = express();

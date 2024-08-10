@@ -14,6 +14,10 @@ import Login from '../pages/Login';
 //import PostList from '../components/post/postList';
 import PostForm from '../components/post/postForm';
 import Post from '../components/post/post';
+import PostManager from '../components/post/PostManager';
+import PostPage from '../components/post/postPage';
+import CreatePostPage from '../components/post/createPostPage';
+import ViewPostsPage from '../components/post/viewPostsPage';
 
 const AppRoutes = () => {
     return (
@@ -28,8 +32,9 @@ const AppRoutes = () => {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/info" element={<DisasterInfo />} />
                 <Route path="/educationalResources" element={<EducationalResources />} />
-                <Route path="/posts" element={<Post />} />
-                <Route path="/post" element={<PostForm />} />
+                <Route path="/post" element={<CreatePostPage />} />
+                <Route path="/posts" element={<ViewPostsPage />} />
+                
                 {/* <Route path="/resource/:id" element={<ResourceDetailsPage />} /> */}
             </Routes>
         </Router>

@@ -23,6 +23,7 @@ exports.getAllPosts = async (req, res) => {
   }
 };
 
+
 // Create a new post
 exports.createPost = [
   upload.single('image'), // Handle image upload

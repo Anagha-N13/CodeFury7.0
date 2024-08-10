@@ -36,6 +36,7 @@ const PostForm = ({ addPost }) => {
         setCaption('');
         setImage(null);
       } catch (err) {
+        console.log(err)
         setError('Failed to create post. Please try again.');
       } finally {
         setLoading(false);
