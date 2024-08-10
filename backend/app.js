@@ -26,6 +26,9 @@ app.use(cors({
 const resourceRoutes = require('./src/routes/resourceAllocatorRoutes');
 app.use('/api/', resourceRoutes);
 
+const authRoutes = require('./src/routes/authRoutes');
+app.use('/api/auth', authRoutes);
+
 app.all("/*",(req,res)=>{
     res.status(404).send("page not found");
 });

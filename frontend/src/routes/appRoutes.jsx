@@ -9,12 +9,16 @@ import MapComponent from '../components/map/map';
 import WeatherComponent from '../components/weather/weather';
 import DisasterInfo from '../components/info/info';
 import EducationalResources from '../pages/EducationalResources';
+import Register from '../pages/Register';
+import Login from '../pages/Login';
 
 const AppRoutes = () => {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/home" element={<HomePage />} />
                 <Route path="/map" element={<MapComponent />} />
                 <Route path="/weather" element={<WeatherComponent />} />
                 <Route path="/locator" element={<ResourceLocatorPage />} />
