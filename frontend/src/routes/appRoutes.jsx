@@ -5,6 +5,7 @@ import ResourceLocatorPage from '../pages/ResourceLocatorPage';
 // import ResourceDetailsPage from './pages/ResourceDetailsPage';
 import MapComponent from '../components/map/map';
 import WeatherComponent from '../components/weather/weather';
+import EducationalResources from '../pages/EducationalResources';
 
 const AppRoutes = () => {
     return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
                 <Route path="/map" element={<MapComponent />} />
                 <Route path="/weather" element={<WeatherComponent />} />
                 <Route path="/locator" element={<ResourceLocatorPage />} />
+                <Route path="/educationalResources" element={<EducationalResources />} />
                 {/* <Route path="/resource/:id" element={<ResourceDetailsPage />} /> */}
             </Routes>
         </Router>

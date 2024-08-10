@@ -1,18 +1,30 @@
-import React from 'react'
-// import WeatherComponent from '../components/weather'
-import ResourceLocatorPage from './ResourceLocatorPage'
-import WeatherComponent from '../components/weather/weather'
-import MapComponent from '../components/map/map'
+import React from 'react';
+import Sidebar from '../components/sidebar/Sidebar';
+import '../CSS/home.css';
+import vector from '../Assets/home.jpg';
 
+const Home = ({ username }) => {
+    return (
+        <div className="home-container">
+            {/* Sidebar */}
+            <Sidebar />
 
-function Home() {
-  return (
-    <div>
-      {/* <WeatherComponent />
-      <ResourceLocatorPage/>
-      <MapComponent /> */}
-    </div>
-  )
-}
+            {/* Main Content */}
+            <div className="main-content">
+                {/* Background Image */}
+                <img
+                    src={vector}
+                    alt="Background"
+                    className="background-image"
+                />
 
-export default Home
+                {/* Overlay Text */}
+                <div className="overlay-text">
+                Welcome, [username]! Your go-to hub for disaster preparedness, response, and recovery. Stay informed, stay safe!
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Home;
