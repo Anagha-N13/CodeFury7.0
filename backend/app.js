@@ -29,6 +29,9 @@ app.use('/api/', resourceRoutes);
 const authRoutes = require('./src/routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
+const chatbotRoutes = require('./src/routes/chatBotRoute');
+app.use('/api', chatbotRoutes);
+
 app.all("/*",(req,res)=>{
     res.status(404).send("page not found");
 });
