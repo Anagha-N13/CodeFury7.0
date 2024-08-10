@@ -1,15 +1,22 @@
-require('./src/db/mongoose')
-const express = require("express")
-const app = express()
+require('./src/db/mongoose');
+const path = require('path'); // Add this line at the top of your file
 
-const env = require('dotenv')
-env.config({ path: __dirname + "/env/.env" })
-console.log(__dirname)
+const cors = require('cors');
+const express = require('express');
+const app = express();
 
-const cors = require('cors')
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+
+// app.use(cors())
+
+const env = require('dotenv');
+env.config({path:__dirname + '/env/.env'});
+const port = process.env.PORT;
+
 app.use(express.json());
-const allowedDomains=["http://localhost:3000"]
-app.use(cors({  
+const allowedDomains = "http://localhost:3000";
+app.use(cors({
     credentials:true,
     origin:function (origin, callback) {
         // bypass the requests with no origin
@@ -20,7 +27,7 @@ app.use(cors({
         }
         return callback(null, true);
     }
-}));
+}))
 
 // Import and use resource routes
 const resourceRoutes = require('./src/routes/resourceAllocatorRoutes');
@@ -29,12 +36,19 @@ app.use('/api/', resourceRoutes);
 const authRoutes = require('./src/routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
+
+
+const postRoutes = require('./src/routes/posts');
+app.use('/api/post', postRoutes);
+
 app.all("/*",(req,res)=>{
     res.status(404).send("page not found");
 });
 
-const port = process.env.PORT
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.listen(port, () => {
-    console.log(`listening to port ${port}`)
+//const port = process.env.PORT
+
+app.listen(port,() => {
+    console.log("server running on port ", port);
 })
