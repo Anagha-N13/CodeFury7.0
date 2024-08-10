@@ -1,3 +1,5 @@
+/* auth.css */
+
 .main-container {
     background-image: url('../Assets/background_green.jpg');
     background-size: cover;
@@ -8,11 +10,13 @@
     justify-content: center;
     align-items: center;
 }
-.auth-container{
+
+.auth-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .sub-container {
     background-color: white; /* Set the background to white */
     padding: 30px; /* Add some padding for spacing */
@@ -24,8 +28,48 @@
 
 h2 {
     margin-bottom: 30px; /* Add margin to the bottom of the heading */
+    font-weight: bold;
+    color: #333;
 }
 
 button {
-    width: 100%;
+    width: 100%; /* Ensure buttons span the full width of their container */
+}
+
+.form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.text-danger {
+    font-size: 0.875rem;
+    margin-top: 10px;
+}
+
+
+
+
+.form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+button {
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.text-danger {
+    font-size: 0.875rem;
+    margin-top: 10px;
 }

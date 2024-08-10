@@ -8,6 +8,7 @@ import React from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
 import '../CSS/home.css';
 import vector from '../Assets/home.jpg';
+import Chatbot from '../components/chatbot/Chatbot';
 
 const Home = ({ username }) => {
     return (
@@ -28,6 +29,7 @@ const Home = ({ username }) => {
                 <div className="overlay-text">
                 Welcome, [username]! Your go-to hub for disaster preparedness, response, and recovery. Stay informed, stay safe!
                 </div>
+                <Chatbot/>
             </div>
         </div>
     );

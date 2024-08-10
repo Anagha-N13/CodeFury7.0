@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/auth.css';
-import axios from '../axios/axios'; // Add axios for API calls
+import axios from '../axios/axios';
+import { useNavigate, Link } from 'react-router-dom';
+import Cookies from 'js-cookie'; // Import js-cookie
 
 const Register = ({ onRegister }) => {
     const [username, setUsername] = useState('');
@@ -10,26 +12,17 @@ const Register = ({ onRegister }) => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password === confirmPassword) {
             try {
-                // Make API call to register the user
-                const response = await axios.post('/auth/register', {
-                    username,
-                    email,
-                    password
-                }, {
-                    headers: {'Content-Type': 'application/json'}
-                });
+                const response = await axios.post('/auth/register', { username, email, password });
 
-                console.log("Response from server:", response); // Debug the response
-
-                // Handle the response from the server
                 if (response.data.token) {
-                    console.log("Token received:", response.data.token); // Debug the token
-                    // Call the onRegister function with the necessary data
-                    onRegister(username, email, response.data.token);
+                    Cookies.set('authToken', response.data.token, { expires: 7 });
+                    navigate('/login');
                 } else {
                     alert("Registration failed. Please try again.");
                 }
@@ -46,8 +39,8 @@ const Register = ({ onRegister }) => {
         <div className='main-container'>
             <Container className="auth-container">
                 <div className='sub-container'>
-                    <Row className="justify-content-md-center ">
-                        <Col >
+                    <Row className="justify-content-md-center">
+                        <Col md={6}>
                             <h2 className="text-center">Register</h2>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Group controlId="formBasicUsername" className='pb-3'>
@@ -97,6 +90,10 @@ const Register = ({ onRegister }) => {
                                 <Button variant="primary" type="submit" block>
                                     Register
                                 </Button>
+
+                                <Form.Text className="text-center mt-3">
+                                    Already have an account? <Link to="/login">Login</Link>
+                                </Form.Text>
                             </Form>
                         </Col>
                     </Row>

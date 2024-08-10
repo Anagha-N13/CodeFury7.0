@@ -40,6 +40,8 @@ app.use('/api/auth', authRoutes);
 
 const postRoutes = require('./src/routes/posts');
 app.use('/api/post', postRoutes);
+const chatbotRoutes = require('./src/routes/chatBotRoute');
+app.use('/api', chatbotRoutes);
 
 app.all("/*",(req,res)=>{
     res.status(404).send("page not found");
