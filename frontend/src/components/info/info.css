@@ -1,0 +1,33 @@
+.disaster-container {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .disaster-menu {
+    width: 20%;
+    padding-right: 20px;
+  }
+  
+  .disaster-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .disaster-menu li {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .disaster-menu li:hover {
+    background-color: #ccc;
+  }
+  
+  .disaster-info {
+    width: 40%;
+    padding-right: 20px;
+  }
+  
+  

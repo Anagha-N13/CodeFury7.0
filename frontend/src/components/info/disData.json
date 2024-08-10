@@ -1,0 +1,74 @@
+{
+  "cyclone": {
+    "title": "Cyclone Precautions",
+    "description": "A cyclone is a large scale air mass that rotates around a strong center of low atmospheric pressure. It is characterized by strong winds and heavy rain.",
+    "cause": "Cyclones are caused by the formation of a low-pressure area over warm ocean waters, which leads to the development of intense wind and precipitation.",
+    "before": "Before a cyclone, secure loose objects, stock up on emergency supplies, and stay informed via weather updates.",
+    "during": "During a cyclone, stay indoors, avoid using electrical appliances, and keep emergency kits handy.",
+    "after": "After a cyclone, check for damage, avoid downed power lines, and listen to local authorities for further instructions.",
+    "images": ["cyclone1.png", "cyclone2.png", "cyclone3.png", "cyclone4.png"]
+  },
+  "floods": {
+    "title": "Flood Precautions",
+    "description": "Flooding is an overflow of water that submerges land that is usually dry. It can cause widespread damage and pose serious risks to life and property.",
+    "cause": "Floods are often caused by heavy rainfall, storm surges, or melting snow overwhelming rivers, dams, and drainage systems.",
+    "before": "Before a flood, move valuable items to higher ground and create an emergency kit.",
+    "during": "During a flood, avoid walking or driving through floodwaters and move to higher ground.",
+    "after": "After a flood, avoid areas that are still flooded and clean and disinfect everything that got wet.",
+    "images": ["flood1.png", "flood2.png", "flood3.png", "flood4.png"]
+  },
+  "tsunami": {
+    "title": "Tsunami Precautions",
+    "description": "A tsunami is a series of large ocean waves caused by underwater earthquakes, volcanic eruptions, or landslides.",
+    "cause": "Tsunamis are usually caused by seismic activity on the ocean floor, such as an earthquake or a volcanic eruption.",
+    "before": "Before a tsunami, know the evacuation routes and keep a battery-powered radio on hand.",
+    "during": "During a tsunami, get to high ground as quickly as possible and stay away from the shore.",
+    "after": "After a tsunami, listen to local authorities for updates and avoid re-entering flooded areas.",
+    "images": ["tsunami1.png", "tsunami2.png", "tsunami3.png", "tsunami4.png"]
+  },
+  "earthquake": {
+    "title": "Earthquake Precautions",
+    "description": "An earthquake is the shaking of the surface of the Earth resulting from a sudden release of energy in the Earth's lithosphere that creates seismic waves.",
+    "cause": "Earthquakes are caused by the movement of tectonic plates beneath the Earth's surface.",
+    "before": "Before an earthquake, secure heavy items to walls and create a family emergency plan.",
+    "during": "During an earthquake, drop, cover, and hold on. Stay indoors until the shaking stops.",
+    "after": "After an earthquake, be prepared for aftershocks and check for gas leaks or electrical issues.",
+    "images": ["earthquake1.png", "earthquake2.png", "earthquake3.png", "earthquake4.png"]
+  },
+  "lightning": {
+    "title": "Lightning Precautions",
+    "description": "Lightning is a sudden electrostatic discharge during a thunderstorm that produces a bright flash and a loud sound known as thunder.",
+    "cause": "Lightning is caused by the buildup of static electricity within clouds, which is released as a discharge of electricity between clouds or between a cloud and the ground.",
+    "before": "Before a lightning storm, unplug electrical devices and stay indoors.",
+    "during": "During a lightning storm, avoid water, electronics, and windows.",
+    "after": "After a lightning storm, check for fires or damage caused by lightning strikes.",
+    "images": ["lightning1.png", "lightning2.png"]
+  },
+  "nuclear-radioactive": {
+    "title": "Nuclear/Radioactive Emergencies",
+    "description": "Nuclear emergencies involve the release of radioactive materials that can have serious health and environmental consequences.",
+    "cause": "Nuclear emergencies are typically caused by accidents at nuclear power plants, improper handling of radioactive materials, or the detonation of a nuclear weapon.",
+    "before": "Before a nuclear emergency, identify your shelter locations and have an emergency kit ready.",
+    "during": "During a nuclear emergency, go indoors immediately and stay tuned to emergency broadcasts.",
+    "after": "After a nuclear emergency, decontaminate by removing clothes and washing your body thoroughly.",
+    "images": ["nuclear1.png", "nuclear2.png", "nuclear3.png", "nuclear4.png"]
+  },
+  "forest-fire": {
+    "title": "Forest Fire Precautions",
+    "description": "Forest fires, also known as wildfires, are uncontrolled fires that spread through vegetation and can cause significant damage to property and the environment.",
+    "cause": "Forest fires are often caused by human activities such as unattended campfires, discarded cigarettes, or natural causes like lightning.",
+    "before": "Before a forest fire, create a defensible space around your home and have an evacuation plan.",
+    "during": "During a forest fire, follow evacuation orders and wear protective clothing.",
+    "after": "After a forest fire, be cautious of hot spots and avoid returning until authorities say it's safe.",
+    "images": ["forestfire1.png", "forestfire2.png", "forestfire3.png", "forestfire4.png"]
+  },
+  "chemical-emergencies": {
+    "title": "Chemical Emergencies",
+    "description": "Chemical emergencies involve the release of hazardous chemicals that can harm human health or the environment.",
+    "cause": "Chemical emergencies can be caused by industrial accidents, transportation incidents, or intentional releases of harmful substances.",
+    "before": "Before a chemical emergency, have a disaster supply kit ready and know your community's warning systems.",
+    "during": "During a chemical emergency, follow the instructions of local authorities and avoid areas that may be contaminated.",
+    "after": "After a chemical emergency, avoid contact with spilled chemicals and clean up only when authorities say it's safe.",
+    "images": ["chemical1.png", "chemical2.png", "chemical3.png", "chemical4.png"]
+  }
+}
