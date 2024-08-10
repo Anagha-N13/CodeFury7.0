@@ -1,5 +1,5 @@
 .weather-container {
-    background-color: #f0f4f8;
+    background-color: #D5F7E6;
     padding: 20px;
     border-radius: 10px;
     width: 350px;
@@ -22,7 +22,12 @@
   .weather-location {
     font-size: 20px;
     color: #2a3f54;
+    padding: 10px;
   }
+ .weather-location img{
+  width: 15px;
+ 
+ }
   
   .weather-temp {
     font-size: 48px;
@@ -103,5 +108,26 @@
   .weather-forecast::-webkit-scrollbar-track,
   .weather-weekly::-webkit-scrollbar-track {
     background-color: #f0f4f8;
+  }
+  
+  .weather-icon {
+    font-size: 48px;
+    color: #f39c12;
+  }
+  
+  .forecast-icon, .weekly-icon {
+    font-size: 36px;
+    color: #3498db;
+  }
+  
+  .weather-current {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .weather-details {
+    display: flex;
+    flex-direction: column;
   }
   
