@@ -1,0 +1,107 @@
+.weather-container {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .weather-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2a3f54;
+  }
+  
+  .weather-info {
+    text-align: center;
+  }
+  
+  .weather-location {
+    font-size: 20px;
+    color: #2a3f54;
+  }
+  
+  .weather-temp {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2a3f54;
+  }
+  
+  .weather-description,
+  .weather-humidity,
+  .weather-air-quality,
+  .last-updated {
+    font-size: 16px;
+    color: #7a869a;
+    margin-top: 5px;
+  }
+  
+  .weather-rain {
+    font-size: 16px;
+    color: #007bff;
+    margin-top: 5px;
+  }
+  
+  .last-updated {
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  .weather-forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  .forecast-item {
+    text-align: center;
+    font-size: 14px;
+    color: #2a3f54;
+    margin: 0 10px; /* Add spacing between items */
+    min-width: 60px; /* Ensure each item has enough width */
+  }
+  
+  .weather-weekly {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  .weekly-item {
+    text-align: center;
+    font-size: 14px;
+    color: #2a3f54;
+    margin: 0 10px; /* Add spacing between items */
+    min-width: 60px; /* Ensure each item has enough width */
+  }
+  
+  /* Add scrollbar styling for a better look */
+  .weather-forecast::-webkit-scrollbar,
+  .weather-weekly::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .weather-forecast::-webkit-scrollbar-thumb,
+  .weather-weekly::-webkit-scrollbar-thumb {
+    background-color: #b0b9c3;
+    border-radius: 4px;
+  }
+  
+  .weather-forecast::-webkit-scrollbar-track,
+  .weather-weekly::-webkit-scrollbar-track {
+    background-color: #f0f4f8;
+  }
+  
