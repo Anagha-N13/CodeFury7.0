@@ -3,34 +3,37 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
+// Define a mapping of resource types to icons
+const iconUrls = {
+    hospital: '/icons/Anagha/hospital.png',
+    grocery: '/icons/Anagha/grocery.png',
+    shelter: '/icons/Anagha/shelter.png',
+    pharmacy: '/icons/Anagha/pharmacy.png'
+};
+
 const ResourceMap = ({ latitude, longitude, resources }) => {
-    const [userPosition, setUserPosition] = useState(null);
+    const [location, setLocation] = useState([latitude, longitude]);
 
     useEffect(() => {
-        if (latitude && longitude) {
-            setUserPosition([latitude, longitude]);
-        }
+        setLocation([latitude, longitude]);
     }, [latitude, longitude]);
 
     return (
-        <MapContainer center={userPosition || [51.505, -0.09]} zoom={13} style={{ height: '100vh', width: '100%' }}>
+        <MapContainer center={location} zoom={5} style={{ height: '80vh', width: '100%' }}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
-            {userPosition && (
-                <Marker position={userPosition} icon={L.icon({
-                    iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-                    iconSize: [25, 41],
-                    iconAnchor: [12, 41],
-                })}>
-                    <Popup>You are here</Popup>
-                </Marker>
-            )}
-            {resources.map((resource, index) => (
+            {resources.map(resource => (
                 <Marker
-                    key={index}
+                    key={resource._id}
                     position={[resource.location.coordinates[1], resource.location.coordinates[0]]}
+                    icon={L.icon({
+                        iconUrl: iconUrls[resource.type] || iconUrls.default,
+                        iconSize: [20, 20], // Adjust size as needed
+                        iconAnchor: [16, 32], // Anchor the icon properly
+                        popupAnchor: [0, -32] // Popup position
+                    })}
                 >
                     <Popup>
                         <strong>{resource.name}</strong><br />
