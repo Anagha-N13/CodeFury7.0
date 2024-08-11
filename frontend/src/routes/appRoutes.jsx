@@ -19,6 +19,7 @@ import PostPage from '../components/post/postPage';
 import CreatePostPage from '../components/post/createPostPage';
 import ViewPostsPage from '../components/post/viewPostsPage';
 import FeatureCards from '../components/cards/fcards';
+import HomeNew from '../pages/HomeNew';
 
 const AppRoutes = () => {
     return (
@@ -26,8 +27,9 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/" element={<Register />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/home" element={<HomePage />} />
+                <Route path="/home" element={<HomeNew />} />
                 <Route path="/map" element={<MapComponent />} />
+                <Route path="/profile" element={<HomePage />} />
                 <Route path="/weather" element={<WeatherComponent />} />
                 <Route path="/locator" element={<ResourceLocatorPage />} />
                 <Route path="/dashboard" element={<Dashboard />} />

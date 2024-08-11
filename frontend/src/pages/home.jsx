@@ -11,19 +11,15 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            {/* Sidebar */}
             <Sidebar />
 
-            {/* Main Content */}
-            <div className="main-content">
-                {/* Background Image */}
+            <div className="main-content-new">
                 <img
                     src={vector}
                     alt="Background"
                     className="background-image"
                 />
 
-                {/* Overlay Text */}
                 <div className="overlay-text">
                     Welcome, {username}! Your go-to hub for disaster preparedness, response, and recovery. Stay informed, stay safe!
                 </div>

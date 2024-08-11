@@ -22,7 +22,8 @@ const Login = ({ onLogin }) => {
 
             if (response.data.token) {
                 Cookies.set('authToken', response.data.token, { expires: 7 });
-                Cookies.set('username', email);
+                Cookies.set('username', response.data.username);
+                console.log(response.data)
                 // onLogin(response.data.token);
                 navigate('/home'); // Redirect to a dashboard or home page
             } else {

@@ -3,8 +3,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between; /* Ensures space between cards */
-    padding: 60px;
-    width: 80%;
+    padding: 0px 60px;
+    width: 100%;
 }
 
 .feature-card {
