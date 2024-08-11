@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import disastersData from './disData';
 import './info.css';
+import Sidebar from '../sidebar/Sidebar';
 
 // Assuming images are in the public folder under /Assets/info/
 const DisasterInfo = () => {
@@ -14,6 +15,7 @@ const DisasterInfo = () => {
 
   return (
     <div className='info-main'>
+      <Sidebar />
     <div className="disaster-container">
       <nav className="disaster-menu">
         <ul>

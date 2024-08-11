@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import './createPost.css';
+import Sidebar from '../sidebar/Sidebar';
 
 const CreatePostPage = () => {
     const [caption, setCaption] = useState('');
@@ -46,6 +47,9 @@ const CreatePostPage = () => {
     };
 
     return (
+        <div className='post-extra'>
+
+        <Sidebar />
         <div className="post-form-container">
             <h2>Share Your Experience</h2>
             <form onSubmit={handleSubmit} className="post-form">
@@ -66,6 +70,7 @@ const CreatePostPage = () => {
                 </button>
             </form>
             {error && <p className="post-error">{error}</p>}
+        </div>
         </div>
     );
 };

@@ -328,6 +328,7 @@ const MapComponent = () => {
     return (
         <div className="map-disaster-container">
             <div className="map-half">
+                <h2>Map the Madness: Live Weather & Quakes</h2>
                 <MapContainer center={mapCenter} zoom={5} scrollWheelZoom={true} className="map-container">
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
