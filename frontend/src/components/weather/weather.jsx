@@ -13,7 +13,7 @@ const WeatherComponent = () => {
 
   useEffect(() => {
     const fetchWeatherData = async (lat, lon) => {
-      const weatherApiKey = '61905ccb33061a7b59e12744179a1581'; // OpenWeatherMap API key
+      const weatherApiKey = 'da7978f7f0e69faff614d1ebcdf4aef2'; // OpenWeatherMap API key
 
       try {
         // Fetch city name from coordinates using Nominatim reverse geocoding
