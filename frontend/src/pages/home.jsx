@@ -9,6 +9,7 @@ import Sidebar from '../components/sidebar/Sidebar';
 import '../CSS/home.css';
 import vector from '../Assets/home.jpg';
 import Chatbot from '../components/chatbot/Chatbot';
+import FeatureCards from '../components/cards/fcards';
 
 const Home = ({ username }) => {
     return (
@@ -30,6 +31,7 @@ const Home = ({ username }) => {
                 Welcome, [username]! Your go-to hub for disaster preparedness, response, and recovery. Stay informed, stay safe!
                 </div>
                 <Chatbot/>
+                
             </div>
         </div>
     );

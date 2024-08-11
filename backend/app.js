@@ -51,7 +51,8 @@ app.all("/*",(req,res)=>{
     res.status(404).send("page not found");
 });
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+
 
 //const port = process.env.PORT
 

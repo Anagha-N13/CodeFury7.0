@@ -1,7 +1,7 @@
-// src/pages/CreatePostPage.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import './createPost.css';
 
 const CreatePostPage = () => {
     const [caption, setCaption] = useState('');
@@ -47,7 +47,7 @@ const CreatePostPage = () => {
 
     return (
         <div className="post-form-container">
-            <h2>Create a New Post</h2>
+            <h2>Share Your Experience</h2>
             <form onSubmit={handleSubmit} className="post-form">
                 <textarea
                     placeholder="What's on your mind?"
@@ -55,7 +55,12 @@ const CreatePostPage = () => {
                     onChange={(e) => setCaption(e.target.value)}
                     className="post-caption"
                 />
-                <input type="file" accept="image/*" onChange={handleImageChange} className="post-image-input" />
+                <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageChange}
+                    className="post-image-input"
+                />
                 <button type="submit" className="post-submit-btn" disabled={loading}>
                     {loading ? 'Posting...' : 'Post'}
                 </button>
