@@ -1,0 +1,86 @@
+/* src/CSS/homeOld.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('../Assets/background_green.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Home Container */
+.home-container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: fixed;
+    height: 100%;
+    background-color: #343a40; /* Dark background for sidebar */
+}
+
+/* Main Content */
+.main-content-1 {
+    margin-left: 250px; 
+    width: calc(100% - 250px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+/* Profile Settings */
+.profile-settings {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px; /* Space between sidebar and profile settings */
+    width: 100%; /* Ensure it takes full width available */
+    max-width: 600px; /* Optional: Limit max-width */
+    text-align: center;
+}
+
+.profile-settings h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+.profile-settings p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.profile-button {
+    background-color: #3D4147;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+.profile-button:hover {
+    background-color: rgb(0, 229, 190);
+    color: #3D4147;
+}
+
+/* Chatbot Styling */
+.chatbot-container {
+    margin-top: 20px;
+    width: 100%;
+    
+}

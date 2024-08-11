@@ -20,6 +20,7 @@ import CreatePostPage from '../components/post/createPostPage';
 import ViewPostsPage from '../components/post/viewPostsPage';
 import FeatureCards from '../components/cards/fcards';
 import HomeNew from '../pages/HomeNew';
+import EditProfile from '../pages/editProfile';
 
 const AppRoutes = () => {
     return (
@@ -38,6 +39,8 @@ const AppRoutes = () => {
                 <Route path="/post" element={<CreatePostPage />} />
                 <Route path="/posts" element={<ViewPostsPage />} />
                 <Route path="/cards" element={<FeatureCards />} />
+                <Route path="/edit-profile" element={<EditProfile />} />
+
                 
                 {/* <Route path="/resource/:id" element={<ResourceDetailsPage />} /> */}
             </Routes>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../axios/axios.js'; // Adjust the path to your axios instance
+import axios from '../axios/axios'; // Adjust the path to your axios instance
 import ResourceMap from '../components/ResourceMap';
 import ResourceFilter from '../components/ResourceFilter';
 import ResourceList from '../components/ResourceList';
+import Sidebar from '../components/sidebar/Sidebar'; // Import the Sidebar component
+import '../CSS/resourceAllocator.css'; // Import the CSS file
 
 const ResourceLocatorPage = () => {
     const [latitude, setLatitude] = useState(null);
@@ -68,16 +70,22 @@ const ResourceLocatorPage = () => {
     if (error) return <div>{error}</div>;
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', padding: '20px' }}>
-            <div style={{ flex: 1 }}>
-                <ResourceFilter filterType={filterType} setFilterType={setFilterType} />
-                {latitude !== null && longitude !== null && (
-                    <ResourceMap latitude={latitude} longitude={longitude} resources={resources} />
-                )}
-            </div>
-            <div style={{ flex: 1, paddingLeft: '20px' }}>
-                <h2>Resource List</h2>
-                <ResourceList resources={resources} />
+        <div className="resource-locator-page">
+            <Sidebar /> {/* Add Sidebar here */}
+            <div className="main-content-container">
+                <div className="main-content">
+                    <div>
+                        <ResourceFilter filterType={filterType} setFilterType={setFilterType} />
+                        <h2>Resource List</h2>
+                        <ResourceList resources={resources} />
+                    </div>
+                    <div className="map-container">
+                        {latitude !== null && longitude !== null && (
+                            <ResourceMap latitude={latitude} longitude={longitude} resources={resources} />
+                        )}
+                    </div>
+
+                </div>
             </div>
         </div>
     );
