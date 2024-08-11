@@ -1,4 +1,9 @@
 /* Container for the entire dashboard */
+
+.dash-extra{
+    display: flex;
+    width: 100%;
+}
 .dashboard-container {
     display: flex;
     flex-direction: column;
@@ -8,6 +13,8 @@
     background-color: #f0f2f5;
     height: 100vh; /* Full viewport height */
     overflow: hidden; /* Prevent scrolling of the entire container */
+    background-image: url(../../Assets/background_green.jpg);
+    width: 84%;
 }
 
 /* Header section styling */

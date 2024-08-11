@@ -3,6 +3,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 import PostList from './postList'; // Corrected path
 import './viewpostPage.css';
+import Sidebar from '../sidebar/Sidebar';
 
 const ViewPostsPage = () => {
     const [posts, setPosts] = useState([]);
@@ -38,6 +39,11 @@ const ViewPostsPage = () => {
         setFilteredPosts(filtered);
     };
 
+    const handleSearchChange = (e) => {
+        setSearchTerm(e.target.value);
+        handleSearch();
+    };
+
     const addComment = async (postId, comment) => {
         const username = Cookies.get('username'); // Assuming the username is stored in a cookie
         try {
@@ -45,26 +51,31 @@ const ViewPostsPage = () => {
             const updatedPost = response.data;
             setPosts(posts.map(post => post._id === postId ? updatedPost : post));
             // Re-filter posts after adding a comment
-            setFilteredPosts(posts.map(post => post._id === postId ? updatedPost : post));
+            handleSearch();
         } catch (error) {
             console.error('Error adding comment:', error);
         }
     };
 
     return (
-        <div className='view-posts-page'>
-            <h1>Community Posts</h1>
-            <div className="search-container">
-                <input
-                    type="text"
-                    placeholder="Search posts..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="search-input"
-                />
-                <button onClick={handleSearch} className="search-button-p">Search</button>
+        <div className='postView-extra'>  
+            <div className='sidee'>
+                <Sidebar />
             </div>
-            <PostList posts={filteredPosts} addComment={addComment} />
+            <div className='view-posts-page'>
+                <h1>Connect with People</h1>
+                <div className="search-container">
+                    <input
+                        type="text"
+                        placeholder="Search posts..."
+                        value={searchTerm}
+                        onChange={handleSearchChange}
+                        className="search-input"
+                    />
+                    <button onClick={handleSearch} className="search-button-p">Search</button>
+                </div>
+                <PostList posts={filteredPosts} addComment={addComment} />
+            </div>
         </div>
     );
 };

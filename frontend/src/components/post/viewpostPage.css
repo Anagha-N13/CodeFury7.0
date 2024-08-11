@@ -1,14 +1,29 @@
+.postView-extra{
+  display: flex;
+  background-image: url(../../Assets//background_green.jpg);
+  background: rgb(0,216,165);
+background: -moz-linear-gradient(23deg, rgba(0,216,165,1) 58%, rgba(87,238,203,1) 100%);
+background: -webkit-linear-gradient(23deg, rgba(0,216,165,1) 58%, rgba(87,238,203,1) 100%);
+background: linear-gradient(23deg, rgba(0,216,165,1) 58%, rgba(87,238,203,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00d8a5",endColorstr="#57eecb",GradientType=1);
+min-height: 100vh
+}
+
+.sidee{
+  position: fixed;
+}
 .view-posts-page {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    
+    width: 84%;
+   margin-left: 30%;
   }
   
   h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
     font-size: 28px;
     color: #333;
   }
@@ -20,7 +35,7 @@
     max-width: 600px;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
     font-size: 1rem;
 }
