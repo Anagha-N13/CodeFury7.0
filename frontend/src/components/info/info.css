@@ -5,6 +5,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: row;
+
+  min-height: 100vh;
+  
   /* background: rgb(90,228,168);
 background: -moz-linear-gradient(23deg, rgba(90,228,168,0.560749299719888) 67%, rgba(61,65,71,1) 100%);
 background: -webkit-linear-gradient(23deg, rgba(90,228,168,0.560749299719888) 67%, rgba(61,65,71,1) 100%);
@@ -23,6 +26,7 @@ background-image: url('../../Assets/background_green.jpg');
   max-height: 100vh;
   overflow: hidden; /* Prevent overflow on the container */
   width: 80%;
+  margin-left: 300px;
 }
 
 .disaster-menu {
