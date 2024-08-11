@@ -3,11 +3,11 @@
   padding: 0;
   height: 100%;
   overflow: hidden;
-  background: rgb(90,228,168);
+  /* background: rgb(90,228,168);
 background: -moz-linear-gradient(23deg, rgba(90,228,168,0.560749299719888) 67%, rgba(61,65,71,1) 100%);
 background: -webkit-linear-gradient(23deg, rgba(90,228,168,0.560749299719888) 67%, rgba(61,65,71,1) 100%);
 background: linear-gradient(23deg, rgba(90,228,168,0.560749299719888) 67%, rgba(61,65,71,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5ae4a8",endColorstr="#3d4147",GradientType=1);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5ae4a8",endColorstr="#3d4147",GradientType=1); */
 }
 
 .disaster-container {
