@@ -18,7 +18,7 @@
 }
 
 .sub-container {
-    background-color: white; /* Set the background to white */
+    background-color: rgba(255, 255, 255, 0.3); /* Set the background to white */
     padding: 30px; /* Add some padding for spacing */
     border-radius: 10px; /* Add border-radius for smooth edges */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
@@ -29,7 +29,7 @@
 h2 {
     margin-bottom: 30px; /* Add margin to the bottom of the heading */
     font-weight: bold;
-    color: #333;
+    /* color: #333; */
 }
 
 button {

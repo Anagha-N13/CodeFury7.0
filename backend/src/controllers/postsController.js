@@ -29,13 +29,13 @@ exports.createPost = [
     upload.single('image'), // Handle image upload
     async (req, res) => {
       try {
-        const { caption } = req.body;
+        const { caption,username } = req.body;
   
         const imageUrl = req.file ? req.file.path.replace(/\\/g, '/').replace('uploads/', '') : null;
 
   
         // Create a new post with the formatted image URL
-        const newPost = new Post({ userName: 'Anonymous', caption, imageUrl });
+        const newPost = new Post({ userName: username , caption, imageUrl });
   
         // Save the new post to the database
         await newPost.save();

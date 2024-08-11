@@ -18,8 +18,8 @@ const CreatePostPage = () => {
         setLoading(true);
         setError(null);
 
-        const username = Cookies.get('username'); // Assuming the username is stored in a cookie
-
+        const username = Cookies.get('username');
+        console.log(username);
         if (caption.trim() || image) {
             const formData = new FormData();
             formData.append('caption', caption);
@@ -27,7 +27,7 @@ const CreatePostPage = () => {
             if (image) {
                 formData.append('image', image);
             }
-
+            console.log(formData);
             try {
                 await axios.post('http://localhost:9000/api/post/posts', formData, {
                     headers: {

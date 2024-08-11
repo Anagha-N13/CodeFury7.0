@@ -1,17 +1,14 @@
-//import React from 'react'
- //import WeatherComponent from '../components/weather'
-// import ResourceLocatorPage from './ResourceLocatorPage'
-// import WeatherComponent from '../components/weather/weather'
-// import MapComponent from '../components/map/map'
-// import WeatherComponent from '../components/weather/weather'
 import React from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
 import '../CSS/home.css';
 import vector from '../Assets/home.jpg';
 import Chatbot from '../components/chatbot/Chatbot';
+import Cookies from 'js-cookie';
 import FeatureCards from '../components/cards/fcards';
 
-const Home = ({ username }) => {
+const Home = () => {
+    const username = Cookies.get('username') || 'Guest';
+
     return (
         <div className="home-container">
             {/* Sidebar */}
@@ -28,7 +25,7 @@ const Home = ({ username }) => {
 
                 {/* Overlay Text */}
                 <div className="overlay-text">
-                Welcome, [username]! Your go-to hub for disaster preparedness, response, and recovery. Stay informed, stay safe!
+                    Welcome, {username}! Your go-to hub for disaster preparedness, response, and recovery. Stay informed, stay safe!
                 </div>
                 <Chatbot/>
                 

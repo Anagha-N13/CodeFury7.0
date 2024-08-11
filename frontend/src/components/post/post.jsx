@@ -10,6 +10,8 @@ const Post = ({ post, addComment }) => {
             addComment(post._id, comment);
             setComment('');
         }
+        // const username = Cookies.get('username');
+        // console.log(username);
     };
     
 
