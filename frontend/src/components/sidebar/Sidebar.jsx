@@ -8,7 +8,7 @@ import { FaTachometerAlt, FaBook, FaBell, FaUsers, FaMapMarkerAlt, FaUpload } fr
 const Sidebar = () => {
     return (
         <div className="sidebar">
-            <h2 className="sidebar-title">Dashboard</h2>
+            <h2 className="sidebar-title">ALERTLY</h2>
             <Nav className="flex-column">
                 <Nav.Link href="/home" className="sidebar-item">
                     <FaHome className="sidebar-icon" /> Home
@@ -20,7 +20,7 @@ const Sidebar = () => {
                     <FaBook className="sidebar-icon" /> Educational Resources
                 </Nav.Link>
                 <Nav.Link href="/info" className="sidebar-item">
-                    <FaBell className="sidebar-icon" /> Alerts and Notifications
+                    <FaBell className="sidebar-icon" /> Know More About Disasters
                 </Nav.Link>
                 <Nav.Link href="/posts" className="sidebar-item">
                     <FaUsers className="sidebar-icon" /> Community

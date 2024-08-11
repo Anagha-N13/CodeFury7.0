@@ -1,0 +1,23 @@
+/* Container for the entire page */
+.resources-container {
+    display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: fixed;
+    height: 100%;
+    background-color: #343a40; /* Dark background for sidebar */
+}
+
+/* Content container */
+.content {
+    margin-left: 250px; /* Space for the fixed sidebar */
+    width: calc(100% - 250px); /* Adjust width to fit remaining space */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}

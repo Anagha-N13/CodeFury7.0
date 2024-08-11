@@ -1,7 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
-
+import Sidebar from '../components/sidebar/Sidebar'; // Adjust the path if needed
+import '../CSS/educationalResourrces.css'
 // Sample data for educational resources
 const resources = [
     {
@@ -27,22 +28,27 @@ const resources = [
 
 const EducationalResources = () => {
     return (
-        <Container>
-            <h1 className="my-4">Educational Resources</h1>
-            <Row>
-                {resources.map(resource => (
-                    <Col md={4} key={resource.id} className="mb-4">
-                        <Card>
-                            <Card.Body>
-                                <Card.Title>{resource.title}</Card.Title>
-                                <Card.Text>{resource.description}</Card.Text>
-                                <Button variant="primary" href={resource.link}>Learn More</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                ))}
-            </Row>
-        </Container>
+        <div className="resources-container">
+            <Sidebar />
+            <div className="content">
+                <Container>
+                    <h1 className="my-4">Educational Resources</h1>
+                    <Row>
+                        {resources.map(resource => (
+                            <Col md={4} key={resource.id} className="mb-4">
+                                <Card>
+                                    <Card.Body>
+                                        <Card.Title>{resource.title}</Card.Title>
+                                        <Card.Text>{resource.description}</Card.Text>
+                                        <Button variant="primary" href={resource.link}>Learn More</Button>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
+            </div>
+        </div>
     );
 };
 

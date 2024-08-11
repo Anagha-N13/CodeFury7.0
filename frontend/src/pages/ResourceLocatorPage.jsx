@@ -73,7 +73,7 @@ const ResourceLocatorPage = () => {
         <div className="resource-locator-page">
             <Sidebar /> {/* Add Sidebar here */}
             <div className="main-content-container">
-                <div className="main-content">
+                <div className="main-content-resource">
                     <div>
                         <ResourceFilter filterType={filterType} setFilterType={setFilterType} />
                         <h2>Resource List</h2>
