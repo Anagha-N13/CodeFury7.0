@@ -42,7 +42,7 @@
 
 .feature-card .button {
     background-color: #3D4147;
-    color: #5AE4A8;
+    color: rgb(0, 229, 190);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -52,6 +52,6 @@
 }
 
 .feature-card .button:hover {
-    background-color: #3D4147;
-    color: #5AE4A8;
+    background-color: rgb(0, 229, 190);
+    color: #3D4147;
 }
