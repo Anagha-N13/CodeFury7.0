@@ -7,7 +7,7 @@
   }
   
   .map-half {
-    width: 100%;
+    width: 70%;
   }
   
   .map-half h2{
@@ -22,6 +22,16 @@
     text-align: center;
     }
 
+    .map-half h2 a{
+     font-size: 20px;
+     margin-right: 20px;
+     text-decoration: none;
+     background-color: #343a40;
+     padding: 10px;
+     border-radius: 5px;
+     color: #f0f0f0;
+     transform: translateY(-40px);
+      }
 
   .disaster-half {
     width: 50%;

@@ -247,6 +247,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './map.css';
+import WeatherComponent from '../weather/weather';
 
 // Custom icons for different disasters
 const earthquakeIcon = new L.Icon({
@@ -328,7 +329,7 @@ const MapComponent = () => {
     return (
         <div className="map-disaster-container">
             <div className="map-half">
-                <h2>Map the Madness: Live Weather & Quakes</h2>
+                <h2><a href='/home'>Home</a>Map the Madness: Live Weather & Quakes</h2>
                 <MapContainer center={mapCenter} zoom={5} scrollWheelZoom={true} className="map-container">
                     <TileLayer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -353,6 +354,7 @@ const MapComponent = () => {
                     ))}
                 </MapContainer>
             </div>
+            <WeatherComponent />
         </div>
     );
 };
