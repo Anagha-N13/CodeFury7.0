@@ -1,12 +1,16 @@
 const mongoose = require('mongoose');
-// const url = 'mongodb://127.0.0.1:27017/ieee'
-require('dotenv').config({path:__dirname+"/../env/.env"})
-const url = process.env.URL
+//configuring the path to .env file
+const path = require('path');
+const envPath = path.join(__dirname, '..','env','.env');
+require('dotenv').config({path : envPath});
 
-mongoose.connect(url, { useNewUrlParser: true });
-const con = mongoose.connection
-
-con.on('open', () => {
-    console.log('connected...')
+const url = process.env.URL;
+const con = mongoose.connection;
+mongoose.connect(url);
+con.on('open' , () => {
+    console.log("database connected");
 })
-con.on("error",(error)=>console.log(error))
+
+con.on('error', (err) => {
+    console.log(err);
+})
