@@ -6,8 +6,8 @@
 .post-form-container{
     display: flex;
     flex-direction: column;
-    padding-top: 30px;
-    gap:50px;
+    padding-top: -40px;
+    gap:30px;
     width:84%;
    
 }
@@ -17,4 +17,9 @@
     background-color: rgba(255, 255, 255, 0.3); /* Set the background to white */
     border-radius: 10px; /* Add border-radius for smooth edges */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.sh-img{
+    width: 300px;
+    
 }

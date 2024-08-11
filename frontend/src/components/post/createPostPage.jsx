@@ -4,6 +4,8 @@ import Cookies from 'js-cookie';
 import './createPost.css';
 import Sidebar from '../sidebar/Sidebar';
 
+const share = require('../../Assets/Ananya/icon/share.png')
+
 const CreatePostPage = () => {
     const [caption, setCaption] = useState('');
     const [image, setImage] = useState(null);
@@ -51,6 +53,8 @@ const CreatePostPage = () => {
 
         <Sidebar />
         <div className="post-form-container">
+            <img className = "sh-img" src={share} />
+            
             <h2>Share Your Experience</h2>
             <form onSubmit={handleSubmit} className="post-form">
                 <textarea

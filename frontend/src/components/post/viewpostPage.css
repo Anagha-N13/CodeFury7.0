@@ -12,6 +12,10 @@ min-height: 100vh
 .sidee{
   position: fixed;
 }
+
+.cn-img{
+  width: 200px;
+}
 .view-posts-page {
     max-width: 800px;
     margin: auto;
@@ -24,8 +28,9 @@ min-height: 100vh
     text-align: center;
     margin-bottom: 50px;
     margin-top: 50px;
-    font-size: 28px;
+    font-size: 40px;
     color: #333;
+    font-weight: 800;
   }
   .search-container{
     display: flex;
