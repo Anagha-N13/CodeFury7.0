@@ -1,20 +1,32 @@
-/* Container for the entire dashboard */
+/* src/CSS/dashboard.css */
 
-.dash-extra{
+/* Wrapper to hold both the fixed sidebar and the main content */
+.dashboard-wrapper {
     display: flex;
     width: 100%;
+    
 }
-.dashboard-container {
+
+/* Fixed Sidebar Styling */
+.sidebar {
+    width: 250px;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    position: fixed;
+    height: 100%;
+    background-color: #343a40; /* Dark background for sidebar */
+}
+
+/* Main Content Styling */
+.dashboard-content {
+    margin-left: 250px; /* Space for fixed sidebar */
+    width: calc(100% - 250px); /* Adjust width based on sidebar width */
+    /* background-color: #f0f2f5; */
+    padding: 20px;
+    overflow: hidden; /* Prevent scrolling of the entire container */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent scrolling of the entire container */
-    background-image: url(../../Assets/background_green.jpg);
-    width: 84%;
 }
 
 /* Header section styling */
@@ -33,17 +45,17 @@
     color: #666;
 }
 
-/* Main content area with fixed height */
-.dashboard-content {
+/* Main content area */
+.dashboard-main-content {
     display: flex;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
-    height: calc(100vh - 120px); /* Adjust height based on header size */
+    height: calc(100vh - 80px); /* Adjust height based on header size */
 }
 
-/* State list styling with scrollable content */
+/* State list styling */
 .state-list {
     flex: 1;
     max-width: 300px;
@@ -53,7 +65,7 @@
     padding: 20px;
     margin-right: 20px;
     overflow-y: auto; /* Enable vertical scrolling */
-    height: 80%; /* Full height of the parent container */
+    height: 100%; /* Full height of the parent container */
 }
 
 /* List styling */
@@ -73,7 +85,7 @@
 .state-list li:hover,
 .state-list li.selected {
     background-color: #3D4147;
-  color: #5AE4A8;
+    color: #5AE4A8;
     border-radius: 4px;
 }
 
@@ -87,5 +99,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%; /* Full height of the parent container */
+    height: 100%; /* Full height of the parent container */
 }
