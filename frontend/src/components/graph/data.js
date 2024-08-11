@@ -1,78 +1,207 @@
-// src/data.js
-
 export const states = [
-    'Delhi', 'Mumbai', 'Kolkata', 'Chennai', 'Bangalore', 'Hyderabad', 'Jaipur', 'Lucknow', 'Kanpur', 'Nagpur'
+    'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 
+    'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 
+    'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 
+    'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 
+    'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 
+    'Uttar Pradesh', 'Uttarakhand', 'West Bengal'
 ];
 
 export const disasterData = {
-    'Delhi': {
-        earthquakes: 3,
-        rainfall: 120,
-        cyclones: 1,
-        floods: 0,
-        tsunamis: 0
-    },
-    'Mumbai': {
-        earthquakes: 1,
-        rainfall: 150,
-        cyclones: 2,
-        floods: 1,
-        tsunamis: 0
-    },
-    'Kolkata': {
+    'Andhra Pradesh': {
         earthquakes: 2,
-        rainfall: 100,
+        rainfall: 150,
+        cyclones: 4,
+        floods: 2,
+        tsunamis: 1
+    },
+    'Arunachal Pradesh': {
+        earthquakes: 6,
+        rainfall: 300,
+        cyclones: 0,
+        floods: 4,
+        tsunamis: 0
+    },
+    'Assam': {
+        earthquakes: 5,
+        rainfall: 250,
         cyclones: 1,
+        floods: 5,
+        tsunamis: 0
+    },
+    'Bihar': {
+        earthquakes: 4,
+        rainfall: 200,
+        cyclones: 1,
+        floods: 3,
+        tsunamis: 0
+    },
+    'Chhattisgarh': {
+        earthquakes: 2,
+        rainfall: 180,
+        cyclones: 0,
         floods: 2,
         tsunamis: 0
     },
-    'Chennai': {
+    'Goa': {
         earthquakes: 1,
-        rainfall: 200,
+        rainfall: 250,
+        cyclones: 2,
+        floods: 2,
+        tsunamis: 0
+    },
+    'Gujarat': {
+        earthquakes: 4,
+        rainfall: 120,
         cyclones: 3,
         floods: 2,
         tsunamis: 0
     },
-    'Bangalore': {
-        earthquakes: 0,
-        rainfall: 90,
+    'Haryana': {
+        earthquakes: 2,
+        rainfall: 100,
         cyclones: 0,
-        floods: 0,
+        floods: 1,
         tsunamis: 0
     },
-    'Hyderabad': {
-        earthquakes: 1,
-        rainfall: 80,
+    'Himachal Pradesh': {
+        earthquakes: 7,
+        rainfall: 220,
+        cyclones: 0,
+        floods: 3,
+        tsunamis: 0
+    },
+    'Jharkhand': {
+        earthquakes: 3,
+        rainfall: 150,
+        cyclones: 1,
+        floods: 2,
+        tsunamis: 0
+    },
+    'Karnataka': {
+        earthquakes: 2,
+        rainfall: 190,
+        cyclones: 1,
+        floods: 2,
+        tsunamis: 0
+    },
+    'Kerala': {
+        earthquakes: 2,
+        rainfall: 300,
+        cyclones: 2,
+        floods: 4,
+        tsunamis: 1
+    },
+    'Madhya Pradesh': {
+        earthquakes: 2,
+        rainfall: 140,
         cyclones: 1,
         floods: 1,
         tsunamis: 0
     },
-    'Jaipur': {
-        earthquakes: 0,
-        rainfall: 60,
-        cyclones: 0,
-        floods: 0,
+    'Maharashtra': {
+        earthquakes: 3,
+        rainfall: 200,
+        cyclones: 2,
+        floods: 3,
         tsunamis: 0
     },
-    'Lucknow': {
-        earthquakes: 1,
+    'Manipur': {
+        earthquakes: 6,
+        rainfall: 250,
+        cyclones: 0,
+        floods: 4,
+        tsunamis: 0
+    },
+    'Meghalaya': {
+        earthquakes: 5,
+        rainfall: 300,
+        cyclones: 0,
+        floods: 4,
+        tsunamis: 0
+    },
+    'Mizoram': {
+        earthquakes: 4,
+        rainfall: 250,
+        cyclones: 0,
+        floods: 3,
+        tsunamis: 0
+    },
+    'Nagaland': {
+        earthquakes: 4,
+        rainfall: 220,
+        cyclones: 0,
+        floods: 3,
+        tsunamis: 0
+    },
+    'Odisha': {
+        earthquakes: 3,
+        rainfall: 180,
+        cyclones: 4,
+        floods: 3,
+        tsunamis: 0
+    },
+    'Punjab': {
+        earthquakes: 2,
         rainfall: 110,
         cyclones: 0,
         floods: 1,
         tsunamis: 0
     },
-    'Kanpur': {
-        earthquakes: 0,
+    'Rajasthan': {
+        earthquakes: 3,
         rainfall: 70,
         cyclones: 0,
-        floods: 0,
+        floods: 1,
         tsunamis: 0
     },
-    'Nagpur': {
-        earthquakes: 1,
-        rainfall: 85,
+    'Sikkim': {
+        earthquakes: 4,
+        rainfall: 250,
         cyclones: 0,
-        floods: 0,
+        floods: 2,
+        tsunamis: 0
+    },
+    'Tamil Nadu': {
+        earthquakes: 2,
+        rainfall: 200,
+        cyclones: 3,
+        floods: 3,
+        tsunamis: 1
+    },
+    'Telangana': {
+        earthquakes: 2,
+        rainfall: 160,
+        cyclones: 1,
+        floods: 2,
+        tsunamis: 0
+    },
+    'Tripura': {
+        earthquakes: 2,
+        rainfall: 300,
+        cyclones: 1,
+        floods: 2,
+        tsunamis: 0
+    },
+    'Uttar Pradesh': {
+        earthquakes: 3,
+        rainfall: 150,
+        cyclones: 1,
+        floods: 2,
+        tsunamis: 0
+    },
+    'Uttarakhand': {
+        earthquakes: 6,
+        rainfall: 220,
+        cyclones: 0,
+        floods: 3,
+        tsunamis: 0
+    },
+    'West Bengal': {
+        earthquakes: 3,
+        rainfall: 180,
+        cyclones: 2,
+        floods: 3,
         tsunamis: 0
     }
 };

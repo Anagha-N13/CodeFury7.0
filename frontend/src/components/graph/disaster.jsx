@@ -1,17 +1,15 @@
-// src/components/DisasterBarGraph.js
-
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const DisasterBarGraph = ({ data }) => {
+const DisasterBarGraph = ({ data, state }) => {
     const chartData = {
         labels: ['Earthquakes', 'Rainfall (mm)', 'Cyclones', 'Floods', 'Tsunamis'],
         datasets: [
             {
-                label: 'Disaster Data',
+                label: `${state} Disaster Data`,
                 data: [
                     data.earthquakes || 0,
                     data.rainfall || 0,
@@ -20,11 +18,11 @@ const DisasterBarGraph = ({ data }) => {
                     data.tsunamis || 0
                 ],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)'
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(54, 162, 235, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)'
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
@@ -40,50 +38,42 @@ const DisasterBarGraph = ({ data }) => {
 
     const options = {
         responsive: true,
-        maintainAspectRatio: false, // Allow custom height
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 position: 'top'
             },
             title: {
                 display: true,
-                text: 'Disaster Data by State'
-            }
-        },
-        layout: {
-            padding: {
-                top: 20,
-                bottom: 20,
-                left: 20,
-                right: 20
+                text: `${state} Disaster Data`
             }
         },
         scales: {
             x: {
                 ticks: {
                     font: {
-                        size: 12 // Adjust font size
+                        size: 14
                     }
                 },
                 grid: {
-                    display: false // Hide grid lines if desired
+                    display: false
                 }
             },
             y: {
                 ticks: {
                     font: {
-                        size: 12 // Adjust font size
+                        size: 14
                     }
                 },
                 grid: {
-                    display: true // Show grid lines if desired
+                    display: true
                 }
             }
         }
     };
 
     return (
-        <div className="bar-graph" style={{ width: '60%', height: '400px', margin: 'auto' }}>
+        <div className="bar-graph">
             <Bar data={chartData} options={options} />
         </div>
     );

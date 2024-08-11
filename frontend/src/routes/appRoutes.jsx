@@ -18,6 +18,7 @@ import PostManager from '../components/post/PostManager';
 import PostPage from '../components/post/postPage';
 import CreatePostPage from '../components/post/createPostPage';
 import ViewPostsPage from '../components/post/viewPostsPage';
+import FeatureCards from '../components/cards/fcards';
 
 const AppRoutes = () => {
     return (
@@ -34,6 +35,7 @@ const AppRoutes = () => {
                 <Route path="/educationalResources" element={<EducationalResources />} />
                 <Route path="/post" element={<CreatePostPage />} />
                 <Route path="/posts" element={<ViewPostsPage />} />
+                <Route path="/cards" element={<FeatureCards />} />
                 
                 {/* <Route path="/resource/:id" element={<ResourceDetailsPage />} /> */}
             </Routes>

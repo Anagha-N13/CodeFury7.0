@@ -3,6 +3,7 @@
     margin: auto;
     padding: 20px;
     background-color: #f9f9f9;
+    
   }
   
   h1 {
@@ -11,4 +12,31 @@
     font-size: 28px;
     color: #333;
   }
-  
+  .search-container{
+    display: flex;
+  }
+  .search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.search-button-p {
+    width: 200px;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #3D4147;
+  color: #5AE4A8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #3D4147;
+  color: #5AE4A8;
+}

@@ -10,20 +10,24 @@ const Post = ({ post, addComment }) => {
             addComment(post._id, comment);
             setComment('');
         }
+        // const username = Cookies.get('username');
+        // console.log(username);
     };
+    
 
     return (
         <div className="post">
             <div className="post-header">
                 <p className="post-username">{post.userName}</p>
-                {post.imageUrl && <img src={`http://localhost:9000/${post.imageUrl}`} alt="Post" className="post-image" />}
+                {/* {post.imageUrl && <img src={`http://localhost:9000/${post.imageUrl}`} alt="Post" className="post-image" />} */}
+
             </div>
             <p className="post-caption">{post.caption}</p>
             <div className="post-comments">
                 {post.comments.length > 0 ? (
                     post.comments.map((c, index) => (
                         <div key={index} className="post-comment">
-                            <strong>{c.username}:</strong> <span>{c.text}</span>
+                            <span>{c}</span>
                         </div>
                     ))
                 ) : (

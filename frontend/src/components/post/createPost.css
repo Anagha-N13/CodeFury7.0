@@ -1,0 +1,10 @@
+.post-form-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    gap:50px
+}
+
+.post-form{
+    padding: 100px;
+}

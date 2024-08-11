@@ -26,19 +26,28 @@ exports.getAllPosts = async (req, res) => {
 
 // Create a new post
 exports.createPost = [
-  upload.single('image'), // Handle image upload
-  async (req, res) => {
-    try {
-      const { caption } = req.body;
-      const imageUrl = req.file ? req.file.path : null; // Image URL if file is uploaded
-      const newPost = new Post({ userName: 'Anonymous', caption, imageUrl });
-      await newPost.save();
-      res.status(201).json(newPost);
-    } catch (error) {
-      res.status(500).json({ message: 'Server Error', error });
-    }
-  },
-];
+    upload.single('image'), // Handle image upload
+    async (req, res) => {
+      try {
+        const { caption,username } = req.body;
+  
+        const imageUrl = req.file ? req.file.path.replace(/\\/g, '/').replace('uploads/', '') : null;
+
+  
+        // Create a new post with the formatted image URL
+        const newPost = new Post({ userName: username , caption, imageUrl });
+  
+        // Save the new post to the database
+        await newPost.save();
+  
+        // Respond with the newly created post
+        res.status(201).json(newPost);
+      } catch (error) {
+        res.status(500).json({ message: 'Server Error', error });
+      }
+    },
+  ];
+  
 
 // Add a comment to a post
 exports.addComment = async (req, res) => {

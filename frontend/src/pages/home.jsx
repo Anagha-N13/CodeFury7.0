@@ -4,6 +4,7 @@ import '../CSS/home.css';
 import vector from '../Assets/home.jpg';
 import Chatbot from '../components/chatbot/Chatbot';
 import Cookies from 'js-cookie';
+import FeatureCards from '../components/cards/fcards';
 
 const Home = () => {
     const username = Cookies.get('username') || 'Guest';
@@ -26,9 +27,8 @@ const Home = () => {
                 <div className="overlay-text">
                     Welcome, {username}! Your go-to hub for disaster preparedness, response, and recovery. Stay informed, stay safe!
                 </div>
+                <Chatbot/>
                 
-                {/* Chatbot Component */}
-                <Chatbot />
             </div>
         </div>
     );
