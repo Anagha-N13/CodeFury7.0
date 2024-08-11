@@ -57,7 +57,7 @@ exports.registerUser = async (req, res) => {
                     return res.status(500).json({ msg: 'Error creating token' });
                 }
                 console.log("Generated Token:", token); // Debugging the generated token
-                res.json({ token });
+                res.json({ token,username });
             }
         );
     } catch (err) {
@@ -88,7 +88,7 @@ exports.loginUser = async (req, res) => {
                 id: user.id,
             },
         };
-
+        const username = user.username;
         console.log("Payload:", payload);
         console.log("JWT_SECRET:", process.env.JWT_SECRET || 'hardcodedsecret'); // Ensure the secret is logged for debugging
 
@@ -102,7 +102,7 @@ exports.loginUser = async (req, res) => {
                     return res.status(500).json({ msg: 'Error creating token' });
                 }
                 console.log("Generated Token:", token); // Debugging the generated token
-                res.json({ token });
+                res.json({ token,username });
             }
         );
     } catch (err) {

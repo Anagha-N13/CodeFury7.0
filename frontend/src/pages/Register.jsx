@@ -22,6 +22,8 @@ const Register = ({ onRegister }) => {
 
                 if (response.data.token) {
                     Cookies.set('authToken', response.data.token, { expires: 7 });
+                    Cookies.set('username', response.data.username);
+                    console.log(response.data)
                     navigate('/login');
                 } else {
                     alert("Registration failed. Please try again.");
