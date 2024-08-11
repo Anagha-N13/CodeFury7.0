@@ -5,6 +5,8 @@ import PostList from './postList'; // Corrected path
 import './viewpostPage.css';
 import Sidebar from '../sidebar/Sidebar';
 
+const connect = require('../../Assets/Ananya/icon/connect.png')
+
 const ViewPostsPage = () => {
     const [posts, setPosts] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
@@ -24,24 +26,34 @@ const ViewPostsPage = () => {
         fetchPosts();
     }, []);
 
+    useEffect(() => {
+        handleSearch(); // Trigger search whenever searchTerm changes
+    }, [searchTerm, posts]);
+
     const handleSearch = () => {
         if (searchTerm.trim() === '') {
             setFilteredPosts(posts);
             return;
         }
-        
+
         const lowercasedSearchTerm = searchTerm.toLowerCase();
         const filtered = posts.filter(post => {
-            const noteMatch = post.note ? post.note.toLowerCase().includes(lowercasedSearchTerm) : false;
-            const commentsMatch = post.comments && post.comments.some(comment => comment.toLowerCase().includes(lowercasedSearchTerm));
-            return noteMatch || commentsMatch;
+            // Use caption instead of note
+            const captionText = post.caption ? post.caption.toLowerCase() : '';
+            const commentsText = post.comments ? post.comments.map(comment => comment.toLowerCase()) : [];
+
+            // Combine caption and comments into a single array
+            const searchArray = [captionText, ...commentsText];
+
+            // Check if the search term exists in any of the strings
+            return searchArray.some(text => text.includes(lowercasedSearchTerm));
         });
+
         setFilteredPosts(filtered);
     };
 
     const handleSearchChange = (e) => {
         setSearchTerm(e.target.value);
-        handleSearch();
     };
 
     const addComment = async (postId, comment) => {
@@ -63,7 +75,8 @@ const ViewPostsPage = () => {
                 <Sidebar />
             </div>
             <div className='view-posts-page'>
-                <h1>Connect with People</h1>
+                
+                <h1><img className='cn-img'  src={connect} />Connect with People</h1>
                 <div className="search-container">
                     <input
                         type="text"
